@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Đơn Giản</title>
+    <!-- Thêm Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Bad+Script&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .menu {
+            background-color: #333;
+            overflow: hidden;
+            display: flex;
+        }
+        .menu a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            flex: 1;
+            cursor: pointer;
+        }
+        .menu a:hover {
+            background-color: #575757;
+        }
+        section {
+            display: none; /* Mặc định ẩn tất cả nội dung */
+            padding: 20px;
+        }
+        section.active {
+            display: block; /* Chỉ hiển thị phần đang được chọn */
+        }
+        #trang-chu {
+            background-image: url('https://i.pinimg.com/originals/64/77/81/6477813cbbdb8a122766fea32e74630b.jpg'); /* Đã thay bằng URL mới */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            min-height: 300px;
+        }
+        #trang-chu h1, #trang-chu p {
+            font-family: 'Dancing Script', cursive;
+        }
+        #trang-chu h1 {
+            font-size: 2.5em;
+            margin: 10px 0;
+        }
+        #trang-chu p {
+            font-size: 1.2em;
+            margin: 5px 0;
+        }
+        /* Styling for Văn Học, Âm Nhạc, and Thể Thao sections with black border and rounded corners */
+        #van-hoc, #am-nhac, #the-thao {
+            border: 2px solid black; /* Black border */
+            border-radius: 15px; /* Rounded corners */
+            padding: 20px;
+            margin: 20px 0; /* Space between sections */
+        }
+
+        #van-hoc h1, #am-nhac h1, #the-thao h1 {
+            font-family: 'Bad Script', cursive;
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #van-hoc h1 {
+            color: sea green;
+        }
+        #am-nhac h1 {
+            color: darkred;
+        }
+        #the-thao h1 {
+            color: darkorange;
+        }
+        #van-hoc p, #am-nhac p, #the-thao p {
+            font-family: 'Bad Script', cursive;
+            font-size: 1.2em;
+            text-align: justify;
+            margin: 10px 0;
+        }
+        #van-hoc img, #am-nhac img, #the-thao img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        #am-nhac a, #the-thao a {
+            color: darkblue;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        #am-nhac a:hover, #the-thao a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <nav class="menu">
+        <a onclick="showSection('trang-chu')">Trang Chủ</a>
+        <a onclick="showSection('van-hoc')">Văn Học</a>
+        <a onclick="showSection('am-nhac')">Âm Nhạc</a>
+        <a onclick="showSection('the-thao')">Thể Thao</a>
+    </nav>
+
+    <section id="trang-chu" class="active">
+        <h1>Nguyễn Hiền Mai 12A6</h1>
+        <p>Chào mừng đến với trang web của em.</p>
+    </section>
+
+    <section id="van-hoc">
+        <h1>Văn Học</h1>
+        <p>Đúng thật, khoảng thời gian quý báu nhất là lúc ta không phải suy nghĩ về chuyện tương lai, vui vẻ sống trong hiện tại và bày tỏ cảm xúc chân thật như mình muốn. Câu chuyện <i>Tôi thấy hoa vàng trên cỏ xanh</i> không chỉ là một câu chuyện mà giống như hộp quà chứa đựng những câu chuyện, hồi ức của trẻ thơ. Những trò chơi rất đơn giản, những cảm xúc khác lạ xoẹt qua chúng ta chỉ chốc lát thôi nhưng cũng để ta nhớ được cả một bầu trời thơ ấu đang cất gọn ở trong tâm trí.</p>
+        <p>Đã bao giờ bạn từng ngồi lại và cảm nhận những điều xung quanh ta thật sâu sắc chưa? Những điều tưởng chừng từ lúc có ra phải làm như thế, tuy rất đơn giản nhưng lại giúp ta rất nhiều. Như hai bàn tay của ta vậy.</p>
+        <p><i>"Bàn tay của ta giống như những người bạn thân, luôn chia sẻ với ta mọi lúc vui buồn trong cuộc sống. Bạn cứ ngẫm mà xem, có phải khi bạn mừng rỡ hay phấn khích, hai bàn tay hăng hái gõ vào nhau để nhân đôi niềm vui trong lòng bạn. Khi bạn khóc, hai bàn tay lại thay phiên nhau kiên trì lau khô những giọt lệ lăn tròn trên gò má bạn..."</i></p>
+        <img src="https://kesachonline.com/wp-content/uploads/2017/08/review-tieu-thuyet-hay-toi-thay-hoa-vang-tren-co-xanh-nguyen-nhat-anh-1.jpg" alt="Tôi thấy hoa vàng trên cỏ xanh">
+    </section>
+
+    <section id="am-nhac">
+        <h1>Âm Nhạc</h1>
+        <p>Có những ca khúc ngay nốt nhạc đầu tiên, ca từ đầu tiên cất lên đã khơi lên tự trong trái tim rất nhiều người niềm xúc động dâng trào...</p>
+        <p>Với một đất nước mà lịch sử dựng nước và giữ nước qua biết bao gian lao như đất nước ta, vọng âm của quá khứ tới hôm nay chan chứa bao cảm xúc truyền dẫn qua nhiều thế hệ con người. Điều đó đã được thể hiện một cách xúc động trong ca khúc <i>"Một vòng Việt Nam"</i> của nhạc sĩ Đông Thiên Đức.</p>
+        <p>Đã có nhiều ca sĩ thể hiện ca khúc này nhưng có lẽ qua giọng hát hào sảng của ca sĩ Tùng Dương, "Một vòng Việt Nam" mới cất lên được trọn vẹn tâm thế, cảm xúc của người trẻ ngày hôm nay.</p>
+        <img src="https://i.scdn.co/image/ab67616d00001e02478993ce0c587b2e70242105" alt="Một vòng Việt Nam">
+        <p><a href="https://youtu.be/Zv1aeqWPUv8?si=2yw0x9wUqAdjyAp5" target="_blank">Nghe ngay: Một vòng Việt Nam</a></p>
+
+        <!-- Thêm video YouTube vào mục Âm Nhạc -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Zv1aeqWPUv8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </section>
+
+    <section id="the-thao">
+        <h1>Thể Thao</h1>
+        <p>Sau những nỗ lực tìm kiếm cơ hội, cặp "song sát" Tiến Linh và Xuân Son đã lần lượt tỏa sáng vào phút 90+11 và 90+14 để ấn định thắng lợi 2-0 cho ĐT Việt Nam.</p>
+        <p>Ngay sau trận cầu này, LĐBĐ châu Á (AFC) đã đưa ra những bình luận đáng chú ý về chiến thắng của ĐT Việt Nam trước Singapore trong bài viết có tiêu đề: "Những pha tấn công muộn giúp ĐT Việt Nam có lợi thế trước Singapore".</p>
+        <p>Cả hai bên đều đưa được bóng vào lưới trong thời gian thi đấu chính thức nhưng nỗ lực này đã bị từ chối vì lỗi việt vị".</p>
+        <img src="https://images2.thanhnien.vn/528068263637045248/2024/12/22/img9194-1734826773763212279940.jpeg" alt="Trận đấu Việt Nam">
+        <p><a href="https://vnexpress.net/bao-singapore-vi-tran-luot-ve-nhu-dinh-fansipan-cua-viet-nam-4832994.html" target="_blank">Đọc thêm chi tiết tại VNExpress</a></p>
+    </section>
+
+    <script>
+        function showSection(sectionId) {
+            // Ẩn tất cả các phần
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.remove('active');
+            });
+            // Hiển thị phần được chọn
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
